@@ -24,4 +24,4 @@ document.querySelector('.view-xml').innerHTML = dom.toHTMLView();
 
 ## License
 
-This project is licensed to you under the [GNU General Public License v3.0](./COPYING) open source license. You can find licensing notices [here](./NOTICES).
+This project is licensed to you under the [GNU General Public License v3.0](./LICENSE) open source license.
