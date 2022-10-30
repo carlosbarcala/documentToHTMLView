@@ -1,11 +1,15 @@
 # documentToHTMLView
 Render the content of the 'Document' object ( Javascript ) into HTML code.
 
-# Add to header
+## How to use
+
+### Add to head
+```
 <link href="documentToHTMLView.css" rel="stylesheet"/>
 <script src="documentToHTMLView.js"></script>
+```
 
-# How to use
+### Code
 ```
 const textXML = "<note>" +
     "<to>Tove</to>" +
