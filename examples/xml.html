@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>documentToHTMLView - Example view XML content</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <style>
+            h1 , .view-xml {
+                margin: 0px auto;
+                width: 100%;
+                max-width: 1024px;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+        <link href="../documentToHTMLView.css" rel="stylesheet"/>
+        <script src="../documentToHTMLView.js"></script>
+        <script>
+            function onload() {
+                const textXML = "<note>" +
+                    "<to>Tove</to>" +
+                    "<from>Jani</from>" +
+                    "<heading>Reminder</heading>" +
+                    "<content>Don't forget me this weekend!</content>" +
+                    "</note>";
+                let parser = new DOMParser();
+                let dom = parser.parseFromString( textXML , 'text/xml');
+                document.querySelector('.view-xml').innerHTML = dom.toHTMLView();
+            }
+        </script>
+    </head>
+    <body onload="onload()">
+        <h1>Example 2 - Render XML code</h1>
+        <div class="view-xml">
+
+        </div>
+    </body>
+</html>

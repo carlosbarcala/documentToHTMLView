@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example documentToHTMLView</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <style>
+            h1 , .view-svg {
+                margin: 0px auto;
+                width: 100%;
+                max-width: 1024px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .view-svg {
+                border: 1px solid #bbb;
+                padding: 10px;
+                border-radius: 3px;
+            }
+        </style>
+        <link href="../documentToHTMLView.css" rel="stylesheet"/>
+        <script src="../documentToHTMLView.js"></script>
+        <script>
+            function onload() {
+                fetch('images/HTML5_sticker.svg').then( (response) => response.text() )
+                    .then( (textHTML) => {
+                        const parser = new DOMParser();
+                        const dom = parser.parseFromString( textHTML , 'image/svg+xml');
+                        document.querySelector('.view-svg').innerHTML = dom.toHTMLView();
+                    } );
+            }
+        </script>
+    </head>
+    <body onload="onload()">
+        <h1>Example 3 - Render SVG code</h1>
+        <div class="view-svg">
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>documentToHTMLView - Example view HTML content</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <style>
+            h1 , .view-html {
+                margin: 0px auto;
+                width: 100%;
+                max-width: 1024px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .view-html {
+                border: 1px solid #bbb;
+                padding: 10px;
+                border-radius: 3px;
+            }
+        </style>
+        <link href="../documentToHTMLView.css" rel="stylesheet"/>
+        <script src="../documentToHTMLView.js"></script>
+        <script>
+            function onload() {
+                fetch('html.html').then( (response) => response.text() )
+                    .then( (textHTML) => {
+                        const parser = new DOMParser();
+                        const dom = parser.parseFromString( textHTML , 'text/html');
+                        document.querySelector('.view-html').innerHTML = dom.toHTMLView();
+                    } );
+            }
+        </script>
+    </head>
+    <body onload="onload()">
+        <h1>Example 1 - Render HTML code</h1>
+        <div class="view-html">
+
+        </div>
+    </body>
+</html>
