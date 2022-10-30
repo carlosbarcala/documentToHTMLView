@@ -1,7 +1,7 @@
 # documentToHTMLView
 Render the content of the 'Document' object ( Javascript ) into HTML code.
 
-## How to use
+## Usage
 
 ### Add to head
 ```
