@@ -1,7 +1,10 @@
 # documentToHTMLView
 Render the content of the 'Document' object ( Javascript ) into HTML code.
 
-# Add to header
+## Usage
+
+### Add to head
+```
 ```html
 <link href="documentToHTMLView.css" rel="stylesheet"/>
 <script src="documentToHTMLView.js"></script>
@@ -9,6 +12,8 @@ Render the content of the 'Document' object ( Javascript ) into HTML code.
 
 # How to use
 ```javascript
+### Code
+```
 const textXML = "<note>" +
     "<to>Tove</to>" +
     "<from>Jani</from>" +
@@ -22,4 +27,4 @@ document.querySelector('.view-xml').innerHTML = dom.toHTMLView();
 
 ## License
 
-This project is licensed to you under the [GNU General Public License v3.0](./COPYING) open source license. You can find licensing notices [here](./NOTICES).
+This project is licensed to you under the [GNU General Public License v3.0](./LICENSE) open source license.
