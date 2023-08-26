@@ -2,11 +2,13 @@
 Render the content of the 'Document' object ( Javascript ) into HTML code.
 
 # Add to header
+```html
 <link href="documentToHTMLView.css" rel="stylesheet"/>
 <script src="documentToHTMLView.js"></script>
+```
 
 # How to use
-```
+```javascript
 const textXML = "<note>" +
     "<to>Tove</to>" +
     "<from>Jani</from>" +

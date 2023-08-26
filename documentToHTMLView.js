@@ -49,7 +49,6 @@ Document.prototype.toHTMLView = function() {
             if( level )
                 html += '<span style="padding: 0 '+level*tabSize+'px;"></span>';
             html += '<span class="element">&lt'+node.nodeName+'</span>';
-            console.log(node);
             if( node.hasAttributes() ) {
                 for( const attribute of node.attributes ) {
                 html += '<span class="attribute-name">'+attribute.nodeName+'</span>' +
