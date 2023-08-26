@@ -4,16 +4,14 @@ Render the content of the 'Document' object ( Javascript ) into HTML code.
 ## Usage
 
 ### Add to head
-```
 ```html
 <link href="documentToHTMLView.css" rel="stylesheet"/>
 <script src="documentToHTMLView.js"></script>
 ```
 
 # How to use
-```javascript
 ### Code
-```
+```javascript
 const textXML = "<note>" +
     "<to>Tove</to>" +
     "<from>Jani</from>" +
